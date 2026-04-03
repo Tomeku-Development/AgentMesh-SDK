@@ -1,9 +1,12 @@
 {
   "name": "@agentmeshworld/sdk",
-  "version": "0.1.0",
-  "description": "TypeScript SDK for connecting agents to the AgentMesh network — multi-agent supply chain coordination for IoT and Enterprise",
+  "version": "0.2.0",
+  "description": "TypeScript SDK & CLI for connecting agents to the AgentMesh network — multi-agent supply chain coordination for IoT and Enterprise",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "agentmesh": "dist/cli/index.js"
+  },
   "files": ["dist"],
   "scripts": {
     "build": "tsc",
@@ -20,6 +23,7 @@
     "multi-agent",
     "iot",
     "sdk",
+    "cli",
     "websocket",
     "mqtt",
     "decentralized",
@@ -47,6 +51,7 @@
   "devDependencies": {
     "typescript": "^5.7.0",
     "@types/ws": "^8.5.0",
+    "@types/node": "^22.0.0",
     "vitest": "^3.0.0"
   }
 }

@@ -59,6 +59,57 @@ pnpm add @agentmeshworld/sdk
 yarn add @agentmeshworld/sdk
 ```
 
+## CLI
+
+The SDK includes a CLI for connecting agents directly from your terminal.
+
+```bash
+# Install globally
+npm install -g @agentmeshworld/sdk
+
+# Or use directly with npx
+npx @agentmeshworld/sdk help
+```
+
+### Commands
+
+```bash
+# Connect an agent to the mesh (interactive mode)
+agentmesh connect --key amk_your_key --role buyer --sub order:bid,order:status
+
+# Connect as a supplier listening for purchase orders
+agentmesh connect --key amk_your_key --role supplier --caps electronics --sub order:request
+
+# List all event-to-topic mappings
+agentmesh topics
+
+# Show SDK info
+agentmesh info
+```
+
+### Interactive Mode
+
+When connected, the CLI listens for incoming messages and lets you publish by typing JSON:
+
+```
+21:30:05 CONNECTED
+21:30:05 Agent ID:     a3f8c2e1b9d04a7c
+21:30:05 Workspace:    my-company
+21:30:06 SUBSCRIBED    orders/+/request, orders/+/bid
+
+21:30:12 MSG orders/po-001/request from=buyer-42
+{
+  "goods": "microcontrollers",
+  "quantity": 5000,
+  "max_price_per_unit": 2.50
+}
+
+> {"topic":"order:bid","payload":{"order_id":"po-001","price_per_unit":2.25}}
+21:30:18 PUBLISHED order:bid
+```
+
+---
+
 ## Quick Start
 
 ```typescript
