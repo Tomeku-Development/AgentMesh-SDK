@@ -1,0 +1,52 @@
+{
+  "name": "@agentmesh/sdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for connecting agents to the AgentMesh network — multi-agent supply chain coordination for IoT and Enterprise",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "agentmesh",
+    "mesh",
+    "supply-chain",
+    "multi-agent",
+    "iot",
+    "sdk",
+    "websocket",
+    "mqtt",
+    "decentralized",
+    "coordination"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Hitazurana (HiroJei)",
+    "url": "https://tomeku.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomeku-Development/AgentMesh-SDK.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Tomeku-Development/AgentMesh-SDK/issues"
+  },
+  "homepage": "https://agentmesh.world",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/ws": "^8.5.0",
+    "vitest": "^3.0.0"
+  }
+}
