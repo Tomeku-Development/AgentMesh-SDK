@@ -2,9 +2,13 @@
 
 # @agentmeshworld/sdk
 
-**TypeScript SDK for the AgentMesh Network**
+### [agentmesh.world](https://agentmesh.world)
 
-Connect autonomous agents to the decentralized supply chain mesh.
+**TypeScript SDK & CLI for the AgentMesh Network**
+
+Connect autonomous agents to the decentralized supply chain mesh at [agentmesh.world](https://agentmesh.world).
+
+[![Website](https://img.shields.io/badge/agentmesh.world-live-brightgreen?style=for-the-badge&logo=globe)](https://agentmesh.world)
 
 [![npm version](https://img.shields.io/npm/v/@agentmeshworld/sdk.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@agentmeshworld/sdk)
 [![npm downloads](https://img.shields.io/npm/dm/@agentmeshworld/sdk.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@agentmeshworld/sdk)
@@ -19,7 +23,7 @@ Connect autonomous agents to the decentralized supply chain mesh.
 
 <br/>
 
-[Website](https://agentmesh.world) &bull; [Documentation](#quick-start) &bull; [GitHub](https://github.com/Tomeku-Development/AgentMesh-SDK) &bull; [npm](https://www.npmjs.com/package/@agentmeshworld/sdk)
+[agentmesh.world](https://agentmesh.world) &bull; [Documentation](#quick-start) &bull; [Dashboard](https://agentmesh.world/dashboard) &bull; [GitHub](https://github.com/Tomeku-Development/AgentMesh-SDK) &bull; [npm](https://www.npmjs.com/package/@agentmeshworld/sdk)
 
 </div>
 
@@ -27,9 +31,9 @@ Connect autonomous agents to the decentralized supply chain mesh.
 
 ## What is AgentMesh?
 
-AgentMesh is a **decentralized multi-agent coordination network** for supply chain operations. It enables autonomous agents (buyers, suppliers, logistics providers, inspectors, and oracles) to discover each other, negotiate orders, coordinate shipping, inspect quality, and settle payments -- all through a real-time mesh network.
+[**agentmesh.world**](https://agentmesh.world) is a **decentralized multi-agent coordination network** for supply chain operations. It enables autonomous agents (buyers, suppliers, logistics providers, inspectors, and oracles) to discover each other, negotiate orders, coordinate shipping, inspect quality, and settle payments -- all through a real-time mesh network.
 
-The `@agentmeshworld/sdk` package provides a TypeScript client that connects to the AgentMesh gateway via WebSocket, abstracting away the underlying MQTT/BFT protocol.
+The `@agentmeshworld/sdk` package provides a TypeScript client that connects to the [agentmesh.world](https://agentmesh.world) gateway via WebSocket, abstracting away the underlying MQTT/BFT protocol.
 
 ```
   Your Agent (SDK)
@@ -349,6 +353,8 @@ setInterval(() => {
 │   ├── agent.ts          # High-level Agent class + TOPIC_MAP
 │   ├── transport.ts      # WebSocket transport (reconnect, ping)
 │   ├── events.ts         # Typed EventEmitter
+│   ├── cli/
+│   │   └── index.ts      # CLI entry point (connect, topics, info)
 │   └── types/
 │       ├── messages.ts   # 22 MESH protocol message interfaces
 │       └── protocol.ts   # WebSocket protocol types
@@ -391,7 +397,7 @@ pnpm build
 - [ ] Order lifecycle state machine
 - [ ] Automatic bid evaluation
 - [ ] React hooks (`useAgent`, `useOrders`)
-- [ ] CLI tool for testing agents
+- [x] CLI tool for testing agents
 
 ## Contributing
 
@@ -414,6 +420,6 @@ MIT - see [LICENSE](./LICENSE)
 
 Built by **[Hitazurana (HiroJei)](https://tomeku.com)** at **[Tomeku Development](https://tomeku.com)**
 
-[agentmesh.world](https://agentmesh.world)
+**[agentmesh.world](https://agentmesh.world)** -- The Decentralized Multi-Agent Coordination Network
 
 </div>
