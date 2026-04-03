@@ -1,5 +1,5 @@
 {
-  "name": "@agentmesh/sdk",
+  "name": "@agentmeshworld/sdk",
   "version": "0.1.0",
   "description": "TypeScript SDK for connecting agents to the AgentMesh network — multi-agent supply chain coordination for IoT and Enterprise",
   "main": "dist/index.js",

@@ -1,25 +1,25 @@
 <div align="center">
 
-# @agentmesh/sdk
+# @agentmeshworld/sdk
 
 **TypeScript SDK for the AgentMesh Network**
 
 Connect autonomous agents to the decentralized supply chain mesh.
 
-[![npm version](https://img.shields.io/npm/v/@agentmesh/sdk.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@agentmesh/sdk)
-[![npm downloads](https://img.shields.io/npm/dm/@agentmesh/sdk.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@agentmesh/sdk)
-[![npm total downloads](https://img.shields.io/npm/dt/@agentmesh/sdk.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@agentmesh/sdk)
-[![license](https://img.shields.io/npm/l/@agentmesh/sdk.svg?style=flat-square)](https://github.com/Tomeku-Development/AgentMesh-SDK/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/@agentmeshworld/sdk.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@agentmeshworld/sdk)
+[![npm downloads](https://img.shields.io/npm/dm/@agentmeshworld/sdk.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@agentmeshworld/sdk)
+[![npm total downloads](https://img.shields.io/npm/dt/@agentmeshworld/sdk.svg?style=flat-square&color=cb3837)](https://www.npmjs.com/package/@agentmeshworld/sdk)
+[![license](https://img.shields.io/npm/l/@agentmeshworld/sdk.svg?style=flat-square)](https://github.com/Tomeku-Development/AgentMesh-SDK/blob/main/LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green?style=flat-square&logo=node.js)](https://nodejs.org/)
 
 <br/>
 
-[![NPM Downloads Chart](https://img.shields.io/npm/dm/@agentmesh/sdk?style=for-the-badge&label=Monthly%20Downloads&color=cb3837&logo=npm)](https://www.npmjs.com/package/@agentmesh/sdk)
+[![NPM Downloads Chart](https://img.shields.io/npm/dm/@agentmeshworld/sdk?style=for-the-badge&label=Monthly%20Downloads&color=cb3837&logo=npm)](https://www.npmjs.com/package/@agentmeshworld/sdk)
 
 <br/>
 
-[Website](https://agentmesh.world) &bull; [Documentation](#quick-start) &bull; [GitHub](https://github.com/Tomeku-Development/AgentMesh-SDK) &bull; [npm](https://www.npmjs.com/package/@agentmesh/sdk)
+[Website](https://agentmesh.world) &bull; [Documentation](#quick-start) &bull; [GitHub](https://github.com/Tomeku-Development/AgentMesh-SDK) &bull; [npm](https://www.npmjs.com/package/@agentmeshworld/sdk)
 
 </div>
 
@@ -29,7 +29,7 @@ Connect autonomous agents to the decentralized supply chain mesh.
 
 AgentMesh is a **decentralized multi-agent coordination network** for supply chain operations. It enables autonomous agents (buyers, suppliers, logistics providers, inspectors, and oracles) to discover each other, negotiate orders, coordinate shipping, inspect quality, and settle payments -- all through a real-time mesh network.
 
-The `@agentmesh/sdk` package provides a TypeScript client that connects to the AgentMesh gateway via WebSocket, abstracting away the underlying MQTT/BFT protocol.
+The `@agentmeshworld/sdk` package provides a TypeScript client that connects to the AgentMesh gateway via WebSocket, abstracting away the underlying MQTT/BFT protocol.
 
 ```
   Your Agent (SDK)
@@ -48,21 +48,21 @@ The `@agentmesh/sdk` package provides a TypeScript client that connects to the A
 ## Install
 
 ```bash
-npm install @agentmesh/sdk
+npm install @agentmeshworld/sdk
 ```
 
 ```bash
-pnpm add @agentmesh/sdk
+pnpm add @agentmeshworld/sdk
 ```
 
 ```bash
-yarn add @agentmesh/sdk
+yarn add @agentmeshworld/sdk
 ```
 
 ## Quick Start
 
 ```typescript
-import { Agent } from "@agentmesh/sdk";
+import { Agent } from "@agentmeshworld/sdk";
 
 const agent = new Agent({
   url: "wss://agentmesh.world/ws/v1/agent",
@@ -172,7 +172,7 @@ Use friendly event names instead of raw MQTT topic patterns:
 Lower-level WebSocket transport with auto-reconnect and exponential backoff.
 
 ```typescript
-import { Transport } from "@agentmesh/sdk";
+import { Transport } from "@agentmeshworld/sdk";
 
 const transport = new Transport({
   url: "wss://agentmesh.world/ws/v1/agent",
@@ -220,7 +220,7 @@ import type {
   // Health
   HealthAlert,
   RoleRedistribution,
-} from "@agentmesh/sdk";
+} from "@agentmeshworld/sdk";
 ```
 
 ## Examples
@@ -228,7 +228,7 @@ import type {
 ### Supplier Agent
 
 ```typescript
-import { Agent } from "@agentmesh/sdk";
+import { Agent } from "@agentmeshworld/sdk";
 
 const supplier = new Agent({
   url: "wss://agentmesh.world/ws/v1/agent",
@@ -260,7 +260,7 @@ supplier.on("message", ({ topic, payload }) => {
 ### IoT Device Agent
 
 ```typescript
-import { Agent } from "@agentmesh/sdk";
+import { Agent } from "@agentmeshworld/sdk";
 
 const sensor = new Agent({
   url: "wss://agentmesh.world/ws/v1/agent",
@@ -292,7 +292,7 @@ setInterval(() => {
 ## Architecture
 
 ```
-@agentmesh/sdk
+@agentmeshworld/sdk
 ├── src/
 │   ├── index.ts          # Barrel exports
 │   ├── agent.ts          # High-level Agent class + TOPIC_MAP
